@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#0a1628">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>عرض جدول التقاعد</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="hdr">
+    <div class="hdr-logo">🏛️</div>
+    <div class="hdr-text">
+      <h1>جداول التقاعد الاختياري</h1>
+      <p>عرض خطة تقاعدية مشارَكة</p>
+    </div>
+    <div class="hdr-badge">جدول مشارَك</div>
+  </div>
+</header>
+
+<main>
+
+  <div id="loadingState">
+    <div class="loader-ring"></div>
+    <p>جاري تحميل الجدول...</p>
+  </div>
+
+  <div id="errorState">
+    <div class="error-icon">⚠️</div>
+    <h2>تعذّر تحميل الجدول</h2>
+    <p id="errorMsg">الرابط غير صحيح أو منتهي الصلاحية.<br>يرجى التواصل مع من أرسل لك الرابط.</p>
+  </div>
+
+  <div id="actionBar">
+    <div class="share-info-badge" id="infoLabel">🔗 جاري التحميل...</div>
+    <button class="btn btn-pdf" id="openPdfBtn">📄 فتح PDF</button>
+    <button class="btn btn-dl" id="dlPdfBtn">📥 تحميل PDF</button>
+  </div>
+
+  <div id="viewerContent"></div>
+
+</main>
+
+<div id="toast"></div>
+
+<div class="viewer-footer">
+  جداول التقاعد الاختياري — نظام رسمي لاحتساب الراتب التقاعدي<br>
+  <a href="https://linktr.ee/Daman2026" target="_blank" rel="noopener noreferrer">للمزيد من المعلومات والاستفسارات اضغط هنا</a>
+</div>
+
+<script src="viewer.js"></script>
+</body>
+</html>

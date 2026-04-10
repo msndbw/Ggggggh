@@ -233,7 +233,7 @@ body.has-nav main{padding-bottom:90px}
 
 /* ── VIEWER ── */
 #actionBar{display:none;gap:10px;flex-wrap:wrap;margin-bottom:18px;padding:14px 18px;background:var(--white);border-radius:var(--rl);border:1px solid var(--brd);box-shadow:var(--sh1);align-items:center}
-.share-info-badge{display:flex;align-items:center;gap:8px;flex:1;font-size:.81rem;color:var(--c1);background:#eef2fb;padding:8px 13px;border-radius:8px;border-right:3px solid var(--c3);min-width:0}
+.share-info-badge{display:flex;align-items:center;gap:8px;flex:1;font-size:.81rem;color:var(--c1);background:#eef2fb;padding:8px 13px;border-radius:8px;border-right:3px solid var(--c3);min-width:0;word-break:break-word}
 .share-info-badge b{color:var(--c3);font-size:.86rem}
 #loadingState{text-align:center;padding:70px 18px}
 .loader-ring{width:56px;height:56px;border:5px solid var(--cream2);border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 18px}
@@ -280,7 +280,9 @@ body.has-nav main{padding-bottom:90px}
   .modal-footer{padding:9px 13px 18px;flex-wrap:wrap}
   .modal-footer .btn-modal-confirm,.modal-footer .btn-modal-cancel{flex:1;justify-content:center}
   #actionBar{flex-direction:column;align-items:stretch}
+  #actionBar .btn{justify-content:center;width:100%}
   .btn{justify-content:center}
+  .share-info-badge{font-size:.75rem}
 }
 @media(min-width:481px) and (max-width:768px){
   .hdr-badge{display:none}

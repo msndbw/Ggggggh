@@ -494,7 +494,19 @@ function copyAll(chosen){
   if(navigator.clipboard?.writeText)navigator.clipboard.writeText(text).then(()=>{}).catch(fb);else fb();
   showToast(`✅ تم نسخ ${chosen.length} خطة`);
 }
-function openCopyAllModal(){if(!PLANS.length)return;_mode='copy';_sel=new Set(PLANS.map((_,i)=>i));document.getElementById('modalTitle').textContent='📋 نسخ الخطط';document.getElementById('modalSubtitle').textContent='اختر الخطط التي تريد نسخها';document.getElementById('modalConfirmBtn').textContent='📋 نسخ المحدد';document.getElementById('shareLinkContainer').style.display='none';renderModal();document.getElementById('planSelectorModal').style.display='flex';}
+function openCopyAllModal(){
+  if(!PLANS.length)return;
+  _mode='copy';
+  _sel=new Set(PLANS.map((_,i)=>i));
+  document.getElementById('modalTitle').textContent='📋 نسخ الخطط';
+  document.getElementById('modalSubtitle').textContent='اختر الخطط التي تريد نسخها';
+  document.getElementById('modalConfirmBtn').textContent='📋 نسخ المحدد';
+  document.getElementById('shareLinkContainer').style.display='none';
+  /* إزالة زر الطباعة إن وُجد من وضع PDF السابق */
+  const old=document.getElementById('modalPrintBtn');if(old)old.remove();
+  renderModal();
+  document.getElementById('planSelectorModal').style.display='flex';
+}
 
 /* ── SHARE LINK ── */
 function buildShareLink(chosen){
